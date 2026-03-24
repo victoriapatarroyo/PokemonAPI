@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PokéSearch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Poké<span>Search</span></h1>
+        <p>Encuentra cualquier Pokémon</p>
+      </header>
+
+      <section class="busqueda">
+        <input
+          type="text"
+          id="inputNombrePokemon"
+          placeholder="ej: pikachu, 25..."
+        />
+        <button onclick="searchPokemon()">Buscar</button>
+      </section>
+
+      <div id="resultado"></div>
+
+      <div id="fav-action" style="display: none">
+        <button class="btn-fav" onclick="saveFavorite()">
+          ♥ Agregar a Favoritos
+        </button>
+      </div>
+
+      <section id="favoritos-section" style="display: none">
+        <div class="fav-header">
+          <h2>Mis Favoritos</h2>
+          <button class="btn-limpiar" onclick="clearFavorites()">
+            Limpiar
+          </button>
+        </div>
+        <div id="favoritos"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

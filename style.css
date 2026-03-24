@@ -1,0 +1,351 @@
+:root {
+  --rojo: #e63946;
+  --oscuro: #1d3557;
+  --gris: #6b7a99;
+  --fondo: #f1f5f9;
+  --blanco: #ffffff;
+  --borde: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--fondo);
+  color: var(--oscuro);
+}
+
+.app {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 0 1.75rem;
+}
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+header h1 span {
+  color: var(--rojo);
+}
+header p {
+  color: var(--gris);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* Búsqueda */
+.busqueda {
+  display: flex;
+  gap: 0.6rem;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.busqueda input {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.busqueda input:focus {
+  border-color: var(--rojo);
+}
+
+.busqueda button {
+  padding: 0.65rem 1.25rem;
+  background: var(--rojo);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.busqueda button:hover {
+  background: #c0303b;
+}
+
+/* Tarjeta resultado */
+.pokemon-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pokemon-numero {
+  font-size: 0.78rem;
+  color: var(--gris);
+}
+.pokemon-nombre {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin: 0.1rem 0 0.5rem;
+}
+
+.tipos {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.tipo {
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #fff;
+}
+.tipo.fire {
+  background: #ff6b35;
+}
+.tipo.water {
+  background: #457b9d;
+}
+.tipo.grass {
+  background: #52b788;
+}
+.tipo.electric {
+  background: #f4c430;
+  color: #333;
+}
+.tipo.ice {
+  background: #90e0ef;
+  color: #333;
+}
+.tipo.fighting {
+  background: #c1121f;
+}
+.tipo.poison {
+  background: #9b5de5;
+}
+.tipo.ground {
+  background: #a07850;
+}
+.tipo.flying {
+  background: #a0c4ff;
+  color: #333;
+}
+.tipo.psychic {
+  background: #f72585;
+}
+.tipo.bug {
+  background: #6a994e;
+}
+.tipo.rock {
+  background: #7c6f57;
+}
+.tipo.ghost {
+  background: #4a4e69;
+}
+.tipo.dragon {
+  background: #2b2d42;
+}
+.tipo.dark {
+  background: #343a40;
+}
+.tipo.steel {
+  background: #778da9;
+}
+.tipo.fairy {
+  background: #f4a0c0;
+  color: #333;
+}
+.tipo.normal {
+  background: #adb5bd;
+  color: #333;
+}
+
+/* Botón favorito */
+#fav-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.65rem;
+}
+.btn-fav {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid var(--rojo);
+  color: var(--rojo);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.btn-fav:hover {
+  background: var(--rojo);
+  color: #fff;
+}
+
+/* Error */
+.error {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: var(--blanco);
+  border: 2px solid #fecaca;
+  border-radius: 12px;
+  color: var(--rojo);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Favoritos */
+#favoritos-section {
+  margin-top: 2rem;
+}
+
+.fav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.fav-header h2 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.btn-limpiar {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gris);
+  background: none;
+  border: 1.5px solid var(--borde);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.btn-limpiar:hover {
+  color: var(--rojo);
+  border-color: var(--rojo);
+}
+
+#favoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.fav-card {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 0.85rem 0.6rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  position: relative;
+  transition: transform 0.2s;
+}
+.fav-card:hover {
+  transform: translateY(-2px);
+}
+.fav-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.fav-card .fav-nombre {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  text-align: center;
+}
+.fav-card .fav-numero {
+  font-size: 0.7rem;
+  color: var(--gris);
+}
+
+.fav-quitar {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.4rem;
+  background: none;
+  border: none;
+  color: var(--borde);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.fav-quitar:hover {
+  color: var(--rojo);
+}
+
+/* Loading */
+.spinner-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--borde);
+  border-top-color: var(--rojo);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 460px) {
+  .pokemon-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tipos {
+    justify-content: center;
+  }
+  .busqueda {
+    flex-direction: column;
+  }
+  #fav-action {
+    justify-content: center;
+  }
+}
